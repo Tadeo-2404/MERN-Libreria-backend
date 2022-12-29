@@ -6,7 +6,7 @@ import libroRoutes from './routes/libroRoutes.js'; //importamos las rutas de lib
 import cors from 'cors';
 const app = express(); //mandamos a llamar express con app
 app.use(express.json());
-app.use(cors());
+app.use(cors({origin: '*'}));
 const port = process.env.port || 4000; //indicamos el puerto donde correra
 dotenv.config(); //le decimos a express donde buscar la conexion
 conectarDB();
