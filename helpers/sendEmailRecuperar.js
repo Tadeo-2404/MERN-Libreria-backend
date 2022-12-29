@@ -1,13 +1,12 @@
 import Sib from 'sib-api-v3-sdk'
-require('dotenv').config()
 const client = Sib.ApiClient.instance
-const apiKey = client.authentications['api-key']
+const apiKey = client.authentications[process.env.API_KEY]
 apiKey.apiKey = process.env.API_KEY
 const tranEmailApi = new Sib.TransactionalEmailsApi()
 const emailRecuperar = async (cliente) => {
     const sender = {
-        email: 'thatanjan@gmail.com',
-        name: 'Anjan',
+        email: 'libreria@libreria.com',
+        name: 'soporte',
     }
     const receivers = [
         {
