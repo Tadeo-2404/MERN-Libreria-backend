@@ -1,4 +1,6 @@
 import Sib from 'sib-api-v3-sdk'
+import dotenv from 'dotenv'; //importamos dotenv para variables de entorno
+dotenv.config(); //le decimos a express donde buscar la conexion
 const client = Sib.ApiClient.instance
 const apiKey = client.authentications['api-key']
 apiKey.apiKey = process.env.API_KEY
