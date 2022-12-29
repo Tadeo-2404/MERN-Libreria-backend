@@ -1,6 +1,6 @@
 import Sib from 'sib-api-v3-sdk'
 const client = Sib.ApiClient.instance
-const apiKey = client.authentications[process.env.API_KEY]
+const apiKey = client.authentications['api-key']
 apiKey.apiKey = process.env.API_KEY
 const tranEmailApi = new Sib.TransactionalEmailsApi()
 const emailConfirmar = async (cliente) => {
